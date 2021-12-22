@@ -1,0 +1,142 @@
+.shoe {
+  width: 95%;
+  color: wheat;
+  background-color: black;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 10rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 1);
+}
+
+.shoe img {
+  background: transparent;
+  width: 100%;
+  user-select: none;
+}
+
+.like {
+  user-select: none;
+  color: red;
+  cursor: pointer;
+}
+
+.like:active {
+  animation: hit 0.3s ease;
+}
+
+.shoe-content {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.shoe-content__title {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+}
+
+.shoe-content__like {
+  display: flex;
+  flex-basis: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shoe-content__like span {
+  user-select: none;
+  margin-right: 10px;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: #aa0d56;
+  color: wheat;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background-color: #0ccc7c;
+  color: #aa0d56;
+}
+
+.btn:active {
+  animation: hit 0.3s ease;
+}
+
+/* 
+  -- min-width: 600px 
+*/
+
+@media screen and (min-width: 600px) {
+  .shoe {
+    width: 48%;
+    font-size: 1.6rem;
+  }
+
+  .shoe-content {
+    flex-direction: column;
+  }
+
+  .shoe-content__title {
+    flex-basis: 70%;
+    flex-direction: column;
+  }
+
+  .btn {
+    padding: 0.6rem 1.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* 
+  -- min-width: 900px
+*/
+
+@media screen and (min-width: 900px) {
+  .shoe {
+    width: 32%;
+    font-size: 1.5rem;
+  }
+
+  .shoe-content__title {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-basis: 70%;
+  }
+
+  .shoe-content__title p:first-child {
+    margin-left: 10%;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+}
+
+/* 
+ -- animation
+*/
+
+@keyframes hit {
+  0% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  50% {
+    transform: translateY(5px);
+    transform: scale(0.8);
+  }
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}

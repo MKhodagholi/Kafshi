@@ -1,0 +1,9 @@
+.dark {
+  background-color: #111;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.light {
+  background-color: #fff;
+}

@@ -1,0 +1,13 @@
+.component-home {
+  width: 60%;
+  color: white;
+}
+
+.description {
+  font-size: 1.5rem;
+}
+
+.name {
+  font-size: 2rem;
+  color: aqua;
+}
